@@ -4,23 +4,20 @@
  * Password hashing and token generation.
  */
 
-import * as argon2 from 'argon2';
+import * as bcrypt from 'bcrypt';
 import { randomBytes, createHash } from 'crypto';
+
+const SALT_ROUNDS = 10;
 
 // ============================================
 // Password Hashing
 // ============================================
 
 /**
- * Hash a password using Argon2id
+ * Hash a password using bcrypt
  */
 export async function hashPassword(password: string): Promise<string> {
-    return argon2.hash(password, {
-        type: argon2.argon2id,
-        memoryCost: 65536, // 64 MB
-        timeCost: 3,
-        parallelism: 4,
-    });
+    return bcrypt.hash(password, SALT_ROUNDS);
 }
 
 /**
@@ -28,7 +25,7 @@ export async function hashPassword(password: string): Promise<string> {
  */
 export async function verifyPassword(password: string, hash: string): Promise<boolean> {
     try {
-        return await argon2.verify(hash, password);
+        return await bcrypt.compare(password, hash);
     } catch {
         return false;
     }

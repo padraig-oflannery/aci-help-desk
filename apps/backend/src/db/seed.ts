@@ -6,7 +6,7 @@
 
 import { drizzle } from 'drizzle-orm/node-postgres';
 import { Pool } from 'pg';
-import * as argon2 from 'argon2';
+import { hashPassword } from '../lib/crypto';
 import {
     users,
     contentCategories,
@@ -42,7 +42,7 @@ async function main() {
         // Create Admin User
         // ============================================
         console.log('  → Creating admin user...');
-        const adminPasswordHash = await argon2.hash('admin123');
+        const adminPasswordHash = await hashPassword('admin123');
         const [adminUser] = await db.insert(users).values({
             email: 'admin@company.com',
             name: 'IT Administrator',
@@ -55,7 +55,7 @@ async function main() {
         // Create Super Admin User
         // ============================================
         console.log('  → Creating super admin user...');
-        const superAdminPasswordHash = await argon2.hash('superadmin123');
+        const superAdminPasswordHash = await hashPassword('superadmin123');
         const [_superAdminUser] = await db.insert(users).values({
             email: 'superadmin@company.com',
             name: 'Super Administrator',
@@ -68,7 +68,7 @@ async function main() {
         // Create Employee Users
         // ============================================
         console.log('  → Creating employee users...');
-        const employeePasswordHash = await argon2.hash('password123');
+        const employeePasswordHash = await hashPassword('password123');
 
         const [employee1] = await db.insert(users).values({
             email: 'john.doe@company.com',
