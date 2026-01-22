@@ -1,0 +1,13 @@
+{
+    "$schema": "https://railway.app/railway.schema.json",
+    "build": {
+        "builder": "NIXPACKS",
+        "buildCommand": "bun install && bun run --cwd packages/shared build && bun run --cwd apps/backend build"
+    },
+    "deploy": {
+        "startCommand": "bun run --cwd apps/backend db:migrate && bun run --cwd apps/backend start",
+        "restartPolicyType": "ON_FAILURE",
+        "healthcheckPath": "/health",
+        "healthcheckTimeout": 100
+    }
+}
