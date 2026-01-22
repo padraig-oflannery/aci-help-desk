@@ -4,7 +4,7 @@
  * Password hashing and token generation.
  */
 
-import * as bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import { randomBytes, createHash } from 'crypto';
 
 const SALT_ROUNDS = 10;
