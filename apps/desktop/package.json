@@ -77,6 +77,13 @@
             "repo": "help-desk-desktop-app"
         },
         "win": {
+            "azureSignOptions": {
+                "publisherName": "Padraig O'Flannery",
+                "timestampServer": "http://timestamp.digicert.com",
+                "endpoint": "https://eus.codesigning.azure.net/",
+                "certificateProfileName": "aci-certificate",
+                "codeSigningAccountName": "Adoption-Choice-Inc"
+            },
             "target": [
                 "nsis"
             ],

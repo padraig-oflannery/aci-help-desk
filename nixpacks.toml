@@ -1,0 +1,9 @@
+[phases.setup]
+nixPkgs = ["bun", "nodejs"]
+aptPkgs = ["libstdc++6", "g++", "make", "python3"]
+
+[phases.build]
+cmds = ["bun install", "bun run --cwd packages/shared build", "bun run --cwd apps/backend build"]
+
+[start]
+cmd = "bun run --cwd apps/backend src/index.ts"
