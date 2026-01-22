@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- IT Helpdesk Pro Tray Icon - Headset Design -->
+  <defs>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6"/>
+      <stop offset="100%" style="stop-color:#1D4ED8"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Headband -->
+  <path d="M48 128 C48 72 96 32 128 32 C160 32 208 72 208 128" 
+        fill="none" 
+        stroke="url(#blueGradient)" 
+        stroke-width="20" 
+        stroke-linecap="round"/>
+  
+  <!-- Left Ear Piece -->
+  <rect x="32" y="112" width="32" height="64" rx="8" fill="url(#blueGradient)"/>
+  
+  <!-- Right Ear Piece -->
+  <rect x="192" y="112" width="32" height="64" rx="8" fill="url(#blueGradient)"/>
+  
+  <!-- Microphone Arm -->
+  <path d="M64 160 Q64 200 96 200 L120 200" 
+        fill="none" 
+        stroke="url(#blueGradient)" 
+        stroke-width="12" 
+        stroke-linecap="round"/>
+  
+  <!-- Microphone -->
+  <circle cx="132" cy="200" r="16" fill="url(#blueGradient)"/>
+</svg>

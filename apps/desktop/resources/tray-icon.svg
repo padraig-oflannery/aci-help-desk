@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+  <!-- Tray Icon 16x16 - Simplified Headset -->
+  <!-- Headband -->
+  <path d="M3 8 C3 4.5 6 2 8 2 C10 2 13 4.5 13 8" 
+        fill="none" 
+        stroke="#3B82F6" 
+        stroke-width="1.5" 
+        stroke-linecap="round"/>
+  
+  <!-- Left Ear Piece -->
+  <rect x="2" y="7" width="2" height="4" rx="0.5" fill="#3B82F6"/>
+  
+  <!-- Right Ear Piece -->
+  <rect x="12" y="7" width="2" height="4" rx="0.5" fill="#3B82F6"/>
+  
+  <!-- Microphone Arm -->
+  <path d="M4 10 Q4 13 6 13 L7.5 13" 
+        fill="none" 
+        stroke="#3B82F6" 
+        stroke-width="1" 
+        stroke-linecap="round"/>
+  
+  <!-- Microphone -->
+  <circle cx="8.5" cy="13" r="1.2" fill="#3B82F6"/>
+</svg>

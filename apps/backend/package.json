@@ -1,0 +1,37 @@
+{
+    "name": "@helpdesk/backend",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "bun run --watch src/index.ts",
+        "build": "bun build src/index.ts --outdir dist --target node",
+        "start": "bun run dist/index.js",
+        "test": "bun test",
+        "db:generate": "drizzle-kit generate:pg",
+        "db:migrate": "bun run src/db/migrate.ts",
+        "db:seed": "bun run src/db/seed.ts",
+        "db:reset": "bun run src/db/reset.ts",
+        "db:studio": "drizzle-kit studio"
+    },
+    "dependencies": {
+        "@aws-sdk/client-s3": "^3.500.0",
+        "@aws-sdk/s3-request-presigner": "^3.500.0",
+        "@fastify/cors": "^9.0.0",
+        "@fastify/helmet": "^11.1.0",
+        "@fastify/jwt": "^8.0.0",
+        "@helpdesk/shared": "workspace:*",
+        "argon2": "^0.31.0",
+        "drizzle-orm": "0.45.1",
+        "fastify": "^4.25.0",
+        "pg": "^8.11.0",
+        "resend": "^2.1.0",
+        "zod": "^3.22.0"
+    },
+    "devDependencies": {
+        "@types/bun": "^1.1.0",
+        "@types/pg": "^8.10.0",
+        "drizzle-kit": "0.31.8",
+        "typescript": "^5.3.0"
+    }
+}

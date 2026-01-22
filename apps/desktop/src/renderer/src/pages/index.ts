@@ -1,0 +1,11 @@
+export { LoginPage } from './LoginPage';
+export { DashboardPage } from './DashboardPage';
+export { KnowledgeBasePage } from './KnowledgeBasePage';
+export { KBDetailPage } from './KBDetailPage';
+export { TicketsPage } from './TicketsPage';
+export { NewTicketPage } from './NewTicketPage';
+export { TicketDetailPage } from './TicketDetailPage';
+export { SettingsPage } from './SettingsPage';
+export { ForgotPasswordPage } from './ForgotPasswordPage';
+export { SplashPage } from './SplashPage';
+export * from './admin';

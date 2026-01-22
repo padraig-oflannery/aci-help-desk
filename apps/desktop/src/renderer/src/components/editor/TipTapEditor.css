@@ -1,0 +1,232 @@
+/**
+ * TipTap Editor Styles
+ */
+
+/* Editor container */
+.tiptap-editor {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ProseMirror editor content */
+.tiptap-content .ProseMirror {
+    outline: none;
+    min-height: 400px;
+}
+
+.tiptap-content .ProseMirror>*+* {
+    margin-top: 0.75em;
+}
+
+/* Placeholder */
+.tiptap-content .ProseMirror p.is-editor-empty:first-child::before {
+    content: attr(data-placeholder);
+    float: left;
+    color: #94a3b8;
+    pointer-events: none;
+    height: 0;
+}
+
+/* Headings */
+.tiptap-content .ProseMirror h1 {
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: #1e293b;
+}
+
+.tiptap-content .ProseMirror h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-top: 1.25em;
+    margin-bottom: 0.5em;
+    color: #1e293b;
+}
+
+.tiptap-content .ProseMirror h3 {
+    font-size: 1.25em;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    color: #1e293b;
+}
+
+/* Paragraphs */
+.tiptap-content .ProseMirror p {
+    margin: 0.75em 0;
+    line-height: 1.7;
+    color: #334155;
+}
+
+/* Lists */
+.tiptap-content .ProseMirror ul,
+.tiptap-content .ProseMirror ol {
+    padding-left: 1.5em;
+    margin: 0.75em 0;
+}
+
+.tiptap-content .ProseMirror li {
+    margin: 0.25em 0;
+}
+
+.tiptap-content .ProseMirror ul>li {
+    list-style-type: disc;
+}
+
+.tiptap-content .ProseMirror ol>li {
+    list-style-type: decimal;
+}
+
+/* Blockquote */
+.tiptap-content .ProseMirror blockquote {
+    border-left: 4px solid #e2e8f0;
+    padding-left: 1em;
+    margin: 1em 0;
+    color: #64748b;
+    font-style: italic;
+}
+
+/* Code blocks */
+.tiptap-content .ProseMirror pre {
+    background: #1e293b;
+    color: #e2e8f0;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    padding: 1em;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 1em 0;
+}
+
+.tiptap-content .ProseMirror pre code {
+    color: inherit;
+    padding: 0;
+    background: none;
+    font-size: 0.875em;
+}
+
+/* Inline code */
+.tiptap-content .ProseMirror code {
+    background-color: #f1f5f9;
+    color: #e11d48;
+    padding: 0.2em 0.4em;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* Links */
+.tiptap-content .ProseMirror a {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+.tiptap-content .ProseMirror a:hover {
+    color: #1d4ed8;
+}
+
+/* Horizontal rule */
+.tiptap-content .ProseMirror hr {
+    border: none;
+    border-top: 2px solid #e2e8f0;
+    margin: 2em 0;
+}
+
+/* Images */
+.tiptap-content .ProseMirror img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin: 1em 0;
+}
+
+.tiptap-content .ProseMirror img.ProseMirror-selectednode {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+/* Videos */
+.tiptap-content .ProseMirror video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin: 1em 0;
+    background: #1e293b;
+}
+
+.tiptap-content .ProseMirror video.ProseMirror-selectednode {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+/* Text alignment */
+.tiptap-content .ProseMirror .has-text-align-center {
+    text-align: center;
+}
+
+.tiptap-content .ProseMirror .has-text-align-right {
+    text-align: right;
+}
+
+.tiptap-content .ProseMirror .has-text-align-justify {
+    text-align: justify;
+}
+
+/* Selection */
+.tiptap-content .ProseMirror ::selection {
+    background: #bfdbfe;
+}
+
+/* Lowlight code syntax highlighting */
+.tiptap-content .ProseMirror pre .hljs-comment,
+.tiptap-content .ProseMirror pre .hljs-quote {
+    color: #6b7280;
+}
+
+.tiptap-content .ProseMirror pre .hljs-variable,
+.tiptap-content .ProseMirror pre .hljs-template-variable,
+.tiptap-content .ProseMirror pre .hljs-attribute,
+.tiptap-content .ProseMirror pre .hljs-tag,
+.tiptap-content .ProseMirror pre .hljs-name,
+.tiptap-content .ProseMirror pre .hljs-regexp,
+.tiptap-content .ProseMirror pre .hljs-link,
+.tiptap-content .ProseMirror pre .hljs-selector-id,
+.tiptap-content .ProseMirror pre .hljs-selector-class {
+    color: #f87171;
+}
+
+.tiptap-content .ProseMirror pre .hljs-number,
+.tiptap-content .ProseMirror pre .hljs-meta,
+.tiptap-content .ProseMirror pre .hljs-built_in,
+.tiptap-content .ProseMirror pre .hljs-builtin-name,
+.tiptap-content .ProseMirror pre .hljs-literal,
+.tiptap-content .ProseMirror pre .hljs-type,
+.tiptap-content .ProseMirror pre .hljs-params {
+    color: #fbbf24;
+}
+
+.tiptap-content .ProseMirror pre .hljs-string,
+.tiptap-content .ProseMirror pre .hljs-symbol,
+.tiptap-content .ProseMirror pre .hljs-bullet {
+    color: #34d399;
+}
+
+.tiptap-content .ProseMirror pre .hljs-title,
+.tiptap-content .ProseMirror pre .hljs-section {
+    color: #60a5fa;
+}
+
+.tiptap-content .ProseMirror pre .hljs-keyword,
+.tiptap-content .ProseMirror pre .hljs-selector-tag {
+    color: #a78bfa;
+}
+
+.tiptap-content .ProseMirror pre .hljs-emphasis {
+    font-style: italic;
+}
+
+.tiptap-content .ProseMirror pre .hljs-strong {
+    font-weight: 700;
+}

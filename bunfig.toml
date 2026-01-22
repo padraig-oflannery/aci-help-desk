@@ -1,0 +1,8 @@
+# Bun configuration
+[install]
+# Use exact versions for reproducibility
+exact = true
+
+[run]
+# Silence warnings about missing scripts
+silent = false

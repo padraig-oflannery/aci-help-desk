@@ -1,0 +1,32 @@
+{
+    "name": "it-helpdesk-pro",
+    "private": true,
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
+    "scripts": {
+        "dev": "bun run --cwd apps/backend dev; bun run --cwd apps/desktop dev",
+        "dev:backend": "bun run --cwd apps/backend dev",
+        "dev:desktop": "bun run --cwd apps/desktop dev",
+        "build": "bun run --cwd apps/backend build && bun run --cwd apps/desktop build",
+        "test": "bun run --cwd apps/backend test && bun run --cwd apps/desktop test",
+        "test:backend": "bun run --cwd apps/backend test",
+        "test:desktop": "bun run --cwd apps/desktop test",
+        "docker:up": "docker-compose up -d",
+        "docker:down": "docker-compose down",
+        "docker:logs": "docker-compose logs -f",
+        "db:generate": "bun run --cwd apps/backend db:generate",
+        "db:migrate": "bun run --cwd apps/backend db:migrate",
+        "db:seed": "bun run --cwd apps/backend db:seed",
+        "db:reset": "bun run --cwd apps/backend db:reset",
+        "db:studio": "bun run --cwd apps/backend db:studio",
+        "clean": "rm -rf node_modules apps/*/node_modules packages/*/node_modules"
+    },
+    "devDependencies": {
+        "@types/bun": "^1.1.0",
+        "typescript": "^5.3.0",
+        "prettier": "^3.2.0",
+        "eslint": "^8.56.0"
+    }
+}
